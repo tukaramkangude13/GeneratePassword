@@ -15,9 +15,9 @@
 
         <!-- Password Display Section -->
         <div class="justify-between relative px-4 border-b-8 border-b-stone-950 rounded-md bg-[#2C1A4A] flex">
-            <p>PASSWORD</p>
-            <button data-copy class="relative">
-                <span data-copyMsg></span>
+            <input type="password" readonly class="bg-[#2C1A4A] text-white password-display" id="password-display" placeholder="Password">
+            <button data-copy class=" flex relative">
+                <span data-copyMsg class="copy-message    " > </span>
                 <!-- SVG Icon -->
                 <svg width="30px" height="25px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path fill-rule="evenodd" clip-rule="evenodd" d="M19.5 16.5L19.5 4.5L18.75 3.75H9L8.25 4.5L8.25 7.5L5.25 7.5L4.5 8.25V20.25L5.25 21H15L15.75 20.25V17.25H18.75L19.5 16.5ZM15.75 15.75L15.75 8.25L15 7.5L9.75 7.5V5.25L18 5.25V15.75H15.75ZM6 9L14.25 9L14.25 19.5L6 19.5L6 9Z" fill="#FFFF00"/>
@@ -32,11 +32,11 @@
                 <!-- Length Display -->
                 <div class="flex justify-between px-4">
                     <p>Password Length</p>
-                    <p id="length-number">7</p> <!-- Length display corrected -->
+                    <p id="length-number"></p> <!-- Length display corrected -->
                 </div>
                 <!-- Slider -->
                 <div class="slidecontainer w-full px-4">
-                    <input type="range" min="1" max="15" value="7" id="length-slider" class="slider border border-yellow-500 w-full">
+                    <input type="range" min="1" max="20" value="7" id="length-slider" class="slider border border-yellow-500 w-full">
                 </div>
             </div>
 
@@ -68,6 +68,8 @@
                     <button class="generatebutton py-2 px-4 text-xl">GENERATE PASSWORD</button>
                 </div>
             </div>
+            <button class="border rounded-lg  p-1 px-2  font-bold mx-auto mt-2 " id="refreshBtn">Refresh</button>
+
         </div>
     </div>
 
